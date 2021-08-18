@@ -1,52 +1,59 @@
 <template>
-  <div class="formAjoutArt">
+  <div class="formEditArt">
     <div class="formEditArt__heading">
-        <router-link to="/Liste-des-articles" class="formEditArt__heading__a__chevron">
+      <router-link to="/Navigation-Article" class="formEditArt__heading__a__chevron">
         <i class="fas fa-chevron-left"></i>
       </router-link>
-    <p class="formAjoutArt__heading">Ajouter un article</p>
+      <p class="formEditArt__heading__titre">&Eacute;diter un article</p>
+      <i class="far fa-trash-alt"></i>
     </div>
 
-    <div class="input__div__input__nom">
-
-      <input class="input__nom" type="text" placeholder="Nom de l'article" />
+    <div class="Edit__input__div__input__nom">
+      <input
+        class="Edit__input__nom"
+        type="text"
+        placeholder="Dépose des radiateurs"
+      />
+      <div class="input__prixunit__titre">
+        <p>Nom de l'article</p>
+      </div>
     </div>
 
     <!-- input prix unitaire -->
-    <div class="input__prixunit__container">
-      <div class="input__prixunit__titre">
+    <div class="Edit__input__prixunit__container">
+      <div class="Edit__input__prixunit__titre">
         <p>Prix unitaire HT</p>
       </div>
 
-      <input class="input__prixunit" type="text" placeholder="50.00" />
+      <input class="Edit__input__prixunit" type="text" placeholder="100.00" />
 
-      <div class="input__prixunit__€">
+      <div class="Edit__input__prixunit__€">
         <p class="symbol">{{ euro }}</p>
       </div>
     </div>
 
     <!-- input tva -->
-    <div class="formAjoutArt__tva">
-      <div class="input__tva__titre">
+    <div class="Edit__form__tva">
+      <div class="Edit__input__tva__titre">
         <p>TVA en %</p>
       </div>
 
-      <input class="input__tva" type="text" placeholder="20.00" />
+      <input class="Edit__input__tva" type="text" placeholder="20.00" />
 
-      <div class="input__tva__symbol">
+      <div class="Edit__input__tva__symbol">
         <p class="symbol">{{ pourcentage }}</p>
       </div>
     </div>
 
     <!-- Prix total -->
-    <div class="formAjoutArt__total">
-      <p class="formAjoutArt__total__title">Prix total TTC</p>
-      <div class="formAjoutArt__total__montant">{{ total }}</div>
+    <div class="Edit__total">
+      <p class="Edit___total__title">Prix total TTC</p>
+      <div class="Edit__total__montant">{{ total }}</div>
     </div>
 
     <!-- bouton -->
-    <div class="formAjoutArt__div__bouton">
-      <button class="formAjoutArt__bouton">Enregistrer l'article</button>
+    <div class="Edit___div__bouton">
+      <button class="Edit__bouton">Enregistrer l'article</button>
     </div>
   </div>
 </template>
@@ -60,7 +67,7 @@ export default {
     return {
       euro: "€",
       pourcentage: "%",
-      total: "0,00 €",
+      total: "120,00 €",
     };
   },
 };
@@ -69,14 +76,9 @@ export default {
 <!-- STYLE -->
 
 <style>
-input {
-  border: none;
-}
-p {
-  margin: 0px;
-}
-.formAjoutArt {
-  width: 30%;
+.formEditArt {
+  position: relative;
+  width: 100%;
   padding: 10px;
   background-color: white;
   display: flex;
@@ -85,16 +87,29 @@ p {
   border-radius: 10px;
 }
 /* heading */
-.formAjoutArt__heading {
+.formEditArt__heading {
   width: 80%;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-family:"ChocolatesDemBold";
-  font-size: 30px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.formEditArt__heading__a__chevron {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fa-chevron-left {
+  height: auto;
+}
+.formEditArt__heading__titre {
+  font-family: "ChocolatesDemBold";
+  font-size: 20px;
   text-align: left;
 }
 /* Imput nom */
-.input__div__input__nom {
+.Edit__input__div__input__nom {
   position: relative;
   width: 80%;
   display: flex;
@@ -103,18 +118,15 @@ p {
   border: 1px solid #d5dde5;
   border-radius: 5px;
 }
-.input__nom {
-  font-family:"ChocolatesMedium";
+.Edit__input__nom {
+  width: 80%;
+  font-family: "ChocolatesMedium";
   font-size: 15px;
-}
-.input__nom::-webkit-input-placeholder {
   color: black;
-  opacity: 0.3;
-  text-align: start;
 }
 
 /* input prix unitaire */
-.input__prixunit__container {
+.Edit__input__prixunit__container {
   margin-top: 20px;
   position: relative;
   width: 80%;
@@ -124,28 +136,23 @@ p {
   border: 1px solid #d5dde5;
   border-radius: 5px;
 }
-.input__prixunit__titre {
-  font-family:"ChocolatesMedium";
+.Edit__input__prixunit__titre {
+  font-family: "ChocolatesMedium";
   font-size: 10px;
 }
 
-.input__prixunit__titre {
+.Edit__input__prixunit__titre {
   position: absolute;
   top: -7px;
   background-color: white;
   padding: 0px 3px;
 }
-.input__prixunit {
+.Edit__input__prixunit {
   width: 90%;
   text-align: end;
 }
-.input__prixunit::-webkit-input-placeholder {
-  color: black;
-  opacity: 0.3;
-  text-align: end;
-}
 
-.input__prixunit__€ {
+.Edit__input__prixunit__€ {
   position: absolute;
   display: flex;
   right: 0px;
@@ -162,12 +169,12 @@ p {
   height: 100%;
   margin: 0px;
 }
-.symbol{
-  font-family:"ChocolatesMedium";
+.symbol {
+  font-family: "ChocolatesMedium";
 }
 
 /* input TVA */
-.formAjoutArt__tva {
+.Edit__form__tva {
   margin-top: 20px;
   position: relative;
   width: 80%;
@@ -177,28 +184,23 @@ p {
   border: 1px solid #d5dde5;
   border-radius: 5px;
 }
-.input__tva__titre {
-  font-family:"ChocolatesMedium";
+.Edit__input__tva__titre {
+  font-family: "ChocolatesMedium";
   font-size: 10px;
 }
 
-.input__tva__titre {
+.Edit__input__tva__titre {
   position: absolute;
   top: -7px;
   background-color: white;
   padding: 0px 3px;
 }
-.input__tva {
+.Edit__input__tva {
   width: 90%;
   text-align: end;
 }
-.input__tva::-webkit-input-placeholder {
-  color: black;
-  opacity: 0.3;
-  text-align: end;
-}
 
-.input__tva__symbol {
+.Edit__input__tva__symbol {
   position: absolute;
   display: flex;
   right: 0px;
@@ -216,24 +218,25 @@ p {
   margin: 0px;
 }
 /* total */
-.formAjoutArt__total {
+.Edit__total {
   width: 80%;
   margin-top: 10px;
+  margin-bottom: 30px;
   padding: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-family:"ChocolatesDemBold";
+  font-family: "ChocolatesDemBold";
 }
 /* bouton */
-.formAjoutArt__div__bouton {
+.Edit__div__bouton {
   width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-.formAjoutArt__bouton {
+.Edit__bouton {
   width: 150px;
   margin-top: 20px;
   padding: 10px;
@@ -241,15 +244,37 @@ p {
   border-radius: 20px;
   background-color: #ff916f;
   opacity: 0.5;
-  font-family:"ChocolatesMedium";
+  font-family: "ChocolatesMedium";
   color: white;
 }
-/* TABLET ET MOBILE */
+
 @media screen and (max-width: 768px) {
-  .formAjoutArt {
-  width: 100%;
+  .formEditArt {
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+  }
+  /* bouton */
+.Edit__div__bouton {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
+/* heading */
+.formEditArt__heading {
+  width: 80%;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-
+}
 </style>

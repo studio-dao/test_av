@@ -1,8 +1,8 @@
 <template>
   <div class="PagesNavArt__container__resp">
-    <router-link to="/Ajout-article">
+    <router-link to="/Editer-article">
       <div class="PagesNavArt__container__resp__lien">
-        <p class="PagesNavArt__Lien">Ajouter un article</p>
+        <p class="PagesNavArt__Lien">Editer un article</p>
         <i class="fas fa-chevron-right"></i>
       </div>
     </router-link>
@@ -25,23 +25,8 @@ export default {
 
 <!-- STYLE -->
 <style>
-@font-face {
-  font-family: "ChocolatesDemBold";
-  src: local("tt_chocolates_demibold"),
-    url(~@/assets/Fonts/tt_chocolates_demibold.otf) format("opentype");
-}
-@font-face {
-  font-family: "ChocolatesExBold";
-  src: local("tt_chocolates_extrabold"),
-    url(~@/assets/Fonts/tt_chocolates_extrabold.otf) format("opentype");
-}
-@font-face {
-  font-family: "ChocolatesMedium";
-  src: local("tt_chocolates_medium"),
-    url(~@/assets/Fonts/tt_chocolates_medium.otf) format("opentype");
-}
-
 .PagesNavArt__container__resp {
+  width: 100%;
   position: relative;
   top: 0px;
   right: 0px;
@@ -50,14 +35,13 @@ export default {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
   align-content: center;
   flex-direction: column;
   background-color: #f5faff;
 }
 .PagesNavArt__container__resp__lien {
-    margin: 20px;
-    padding: 10px;
+  margin: 20px;
+  padding: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

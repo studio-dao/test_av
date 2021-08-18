@@ -1,9 +1,10 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import MesArticles from "../views/MesArticles.vue";
-import AjouterUnArtView from "../views/AjouterUnArtView.vue";
+import EditerUnArtView from "../views/EditerUnArtView.vue";
 import ListeArtView from "../views/ListeArtView.vue";
 import NavArt from "../components/NavArt.vue";
+import AjouterArticleView from "../views/AjouterArticleView.vue"
 
 Vue.use(VueRouter);
 
@@ -14,9 +15,9 @@ const routes = [
     component: MesArticles,
   },
   {
-    path: "/Ajout-article",
-    name: "Ajout article",
-    component: AjouterUnArtView,
+    path: "/Editer-article",
+    name: "Editer article",
+    component: EditerUnArtView,
   },
   {
     path: "/Liste-des-articles",
@@ -24,10 +25,15 @@ const routes = [
     component: ListeArtView,
   },
   {
-    path: "/NavArt",
+    path: "/Navigation-Article",
     name: "Navigation article",
     component: NavArt,
-  }
+  },
+  {
+    path: "/Ajouter-Article",
+    name: "Ajouter article",
+    component: AjouterArticleView
+  },
 
 ];
 

@@ -1,8 +1,5 @@
 <template>
   <div class="pagesArt__container">
-    <router-link to="/NavArt">
-      <i class="fas fa-chevron-left"></i>
-    </router-link>
     <ListeArticles />
   </div>
 </template>
@@ -45,7 +42,6 @@ export default {
   left: 0px;
   bottom: 0px;
   width: 100%;
-  height: 100%;
   padding: 2%;
   display: flex;
   flex-direction: row;
