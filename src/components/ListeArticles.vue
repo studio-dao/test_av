@@ -15,7 +15,7 @@
 
     <!-- barre article -->
     <div class="listArt__ListeTab__container">
-      <div :class="listeArt__Liste " v-for="art in tabArt" :key="art.id">
+      <div class="listeArt__Liste" v-for="art in tabArt" :key="art.id">
         <div class="listeArt__Liste__art">
           <div class="listeArt__Liste__art__nomEtChevron">
             <p class="listeArt__Liste__art__nom">
@@ -145,6 +145,9 @@ export default {
   justify-content: space-between;
   align-items: center;
 }
+.listeArt__Liste__art:hover {
+  background-color:  #F5FAFF;
+}
 .listeArt__Liste__art__nomEtChevron {
   padding: 0px 10px;
   width: 100%;
@@ -166,6 +169,7 @@ export default {
   margin-left: 15px;
   padding: 7px;
 }
+
 .fa-chevron-right {
   margin-right: 15px;
   text-align: right;
@@ -183,11 +187,19 @@ export default {
   font-family: "ChocolatesMedium";
   font-size: 14px;
   color: white;
-  background-color: red;
+  background-color: #FF3B30;
+  animation: 1s glissement;
 }
+@keyframes glissement {
+  from {width: 0%;} to {width: 15%;}
+}
+
 .fa-trash-alt {
   color: white;
   margin-bottom: 3px;
+}
+.Edit__bouton{
+  display: none;
 }
 
 /* TABLETTE ET MOBILE */
@@ -223,6 +235,9 @@ export default {
     font-family: "ChocolatesDemBold";
     font-size: 20px;
     text-align: left;
+  }
+  .Edit__bouton{
+    display: block;
   }
 }
 </style>

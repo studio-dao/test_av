@@ -1,7 +1,10 @@
 <template>
   <div class="formEditArt">
     <div class="formEditArt__heading">
-      <router-link to="/Navigation-Article" class="formEditArt__heading__a__chevron">
+      <router-link
+        to="/Navigation-Article"
+        class="formEditArt__heading__a__chevron"
+      >
         <i class="fas fa-chevron-left"></i>
       </router-link>
       <p class="formEditArt__heading__titre">&Eacute;diter un article</p>
@@ -95,11 +98,9 @@ export default {
   justify-content: space-between;
 }
 .formEditArt__heading__a__chevron {
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: none;
 }
+
 .fa-chevron-left {
   height: auto;
 }
@@ -243,7 +244,6 @@ export default {
   border: none;
   border-radius: 20px;
   background-color: #ff916f;
-  opacity: 0.5;
   font-family: "ChocolatesMedium";
   color: white;
 }
@@ -258,23 +258,29 @@ export default {
     align-items: center;
     border-radius: 10px;
   }
+  .formEditArt__heading__a__chevron {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   /* bouton */
-.Edit__div__bouton {
-  width: 80%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
+  .Edit__div__bouton {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 
-/* heading */
-.formEditArt__heading {
-  width: 80%;
-  margin-bottom: 40px;
-  margin-top: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
+  /* heading */
+  .formEditArt__heading {
+    width: 80%;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 </style>

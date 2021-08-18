@@ -219,6 +219,7 @@ p {
 .formAjoutArt__total {
   width: 80%;
   margin-top: 10px;
+  margin-bottom: 40px;
   padding: 10px;
   display: flex;
   flex-direction: row;
@@ -240,7 +241,6 @@ p {
   border: none;
   border-radius: 20px;
   background-color: #ff916f;
-  opacity: 0.5;
   font-family:"ChocolatesMedium";
   color: white;
 }
