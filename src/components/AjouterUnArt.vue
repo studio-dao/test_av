@@ -15,7 +15,7 @@
       <input class="input__prixunit" type="text" placeholder="50.00" />
 
       <div class="input__prixunit__€">
-        <p>{{ euro }}</p>
+        <p class="symbol">{{ euro }}</p>
       </div>
     </div>
 
@@ -28,7 +28,7 @@
       <input class="input__tva" type="text" placeholder="20.00" />
 
       <div class="input__tva__symbol">
-        <p>{{ pourcentage }}</p>
+        <p class="symbol">{{ pourcentage }}</p>
       </div>
     </div>
 
@@ -54,7 +54,7 @@ export default {
     return {
       euro: "€",
       pourcentage: "%",
-      total: "0,00€",
+      total: "0,00 €",
     };
   },
 };
@@ -83,7 +83,7 @@ p {
 .formAjoutArt__heading {
   width: 80%;
   margin-bottom: 20px;
-  font-family: "ChocolatesExBold";
+  font-family:"ChocolatesDemBold";
   font-size: 30px;
   text-align: left;
 }
@@ -97,7 +97,7 @@ p {
   border-radius: 5px;
 }
 .input__nom {
-  font-family: "ChocolateMedium";
+  font-family:"ChocolatesMedium";
   font-size: 15px;
 }
 .input__nom::-webkit-input-placeholder {
@@ -118,7 +118,7 @@ p {
   border-radius: 5px;
 }
 .input__prixunit__titre {
-  font-family: "ChocolateMedium";
+  font-family:"ChocolatesMedium";
   font-size: 10px;
 }
 
@@ -155,6 +155,9 @@ p {
   height: 100%;
   margin: 0px;
 }
+.symbol{
+  font-family:"ChocolatesMedium";
+}
 
 /* input TVA */
 .formAjoutArt__tva {
@@ -168,7 +171,7 @@ p {
   border-radius: 5px;
 }
 .input__tva__titre {
-  font-family: "ChocolateMedium";
+  font-family:"ChocolatesMedium";
   font-size: 10px;
 }
 
@@ -213,6 +216,7 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  font-family:"ChocolatesDemBold";
 }
 /* bouton */
 .formAjoutArt__div__bouton {
@@ -230,7 +234,7 @@ p {
   border-radius: 20px;
   background-color: #ff916f;
   opacity: 0.5;
-  font-family: "ChocolateMedium";
+  font-family:"ChocolatesMedium";
   color: white;
 }
 </style>

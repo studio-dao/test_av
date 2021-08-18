@@ -1,28 +1,22 @@
 <template>
   <div class="pagesArt__container">
-    <div class="ArtComponent__container">
-    <ListeArticles />
+    <router-link to="/NavArt">
+    <i class="fas fa-chevron-left"></i>
+    </router-link>
     <AjouterUnArt/>
-    </div>
-    <NavArt class="NavArt__show"/>
   </div>
 </template>
 
 
 <!-- SCRIPT -->
 <script>
-// @ is an alias to /src
-import ListeArticles from "../components/ListeArticles.vue";
-import AjouterUnArt from "../components/AjouterUnArt.vue";
-import NavArt from "../components/NavArt.vue";
 
+import AjouterUnArt from "../components/AjouterUnArt.vue";
 
 export default {
-  name: "MesArticles",
+  name: "AjoutArtView",
   components: {
-    ListeArticles,
-    AjouterUnArt,
-    NavArt
+    AjouterUnArt
   },
 };
 </script>
@@ -45,7 +39,7 @@ export default {
   url(~@/assets/Fonts/tt_chocolates_medium.otf) format('opentype');
 }
 
-.ArtComponent__container{
+.pagesArt__container{
   position: relative;
   top:0px;
   right: 0px;
@@ -61,21 +55,7 @@ export default {
   background-color: #F5FAFF;
   
 }
-
 a{
   text-decoration: none;
 }
-@media screen and (max-width: 768px){
-  .ArtComponent__container{
-    display: none;
-  }
-}
-
-
-@media screen and (min-width: 768px){
-.NavArt__show{
-  display: none;
-}
-}
-
 </style>
