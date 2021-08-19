@@ -2,7 +2,7 @@
   <div class="PagesNavArt__container__resp">
     <router-link to="/Editer-article">
       <div class="PagesNavArt__container__resp__lien">
-        <p class="PagesNavArt__Lien">Editer un article</p>
+        <p class="PagesNavArt__Lien"> &Eacute;diter un article</p>
         <i class="fas fa-chevron-right"></i>
       </div>
     </router-link>

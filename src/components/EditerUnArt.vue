@@ -125,6 +125,10 @@ export default {
   font-size: 15px;
   color: black;
 }
+.Edit__input__nom::-webkit-input-placeholder {
+  color: black;
+  opacity: 1;
+}
 
 /* input prix unitaire */
 .Edit__input__prixunit__container {
@@ -140,17 +144,19 @@ export default {
 .Edit__input__prixunit__titre {
   font-family: "ChocolatesMedium";
   font-size: 10px;
-}
-
-.Edit__input__prixunit__titre {
   position: absolute;
   top: -7px;
   background-color: white;
   padding: 0px 3px;
 }
+
 .Edit__input__prixunit {
   width: 90%;
   text-align: end;
+}
+.Edit__input__prixunit::-webkit-input-placeholder {
+  color: black;
+  opacity: 1;
 }
 
 .Edit__input__prixunit__€ {
@@ -176,9 +182,9 @@ export default {
 
 /* input TVA */
 .Edit__form__tva {
-  margin-top: 20px;
   position: relative;
   width: 80%;
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
   padding: 10px;
@@ -188,9 +194,6 @@ export default {
 .Edit__input__tva__titre {
   font-family: "ChocolatesMedium";
   font-size: 10px;
-}
-
-.Edit__input__tva__titre {
   position: absolute;
   top: -7px;
   background-color: white;
@@ -199,6 +202,10 @@ export default {
 .Edit__input__tva {
   width: 90%;
   text-align: end;
+}
+.Edit__input__tva::-webkit-input-placeholder {
+  color: black;
+  opacity: 1;
 }
 
 .Edit__input__tva__symbol {

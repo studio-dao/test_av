@@ -194,7 +194,7 @@ p {
 }
 .input__tva::-webkit-input-placeholder {
   color: black;
-  opacity: 0.3;
+  opacity: 1;
   text-align: end;
 }
 
@@ -241,6 +241,7 @@ p {
   border: none;
   border-radius: 20px;
   background-color: #ff916f;
+  opacity:0.5;
   font-family:"ChocolatesMedium";
   color: white;
 }
